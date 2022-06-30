@@ -7,11 +7,14 @@
 
 import React from "react"
 import { GlobalStyles } from "twin.macro"
+import Nav from "./organism/Nav"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
+      <Nav />
       <main>{children}</main>
     </>
   )
