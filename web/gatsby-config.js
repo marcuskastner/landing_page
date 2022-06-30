@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    { resolve: `gatsby-plugin-emotion` },
     {
       resolve: "gatsby-source-sanity",
       options: {
