@@ -15,7 +15,7 @@ export const SideBarToggle = ({ toggle, isOpen }) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         animate={isOpen ? "open" : "closed"}
-        variants={{ open: { x: -200 }, closed: {} }}
+        variants={{ open: {}, closed: {} }}
       >
         {/* Middle Line */}
         <motion.line
