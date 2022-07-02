@@ -1,32 +1,29 @@
-import React, { useState } from "react"
+import React from "react"
 import tw from "twin.macro"
 import { QRCodeSvg } from "../atom/svg"
-import { SideBarToggle } from "../molecule/SideBarToggle"
-import { motion } from "framer-motion"
-import SideBar from "../molecule/SideBar"
 
 function Nav() {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <Wrapper>
-      <NavContainer>
-        <LogoContainer>
-          <QRCodeSvg />
-          <LogoText>Marcus Kastner</LogoText>
-        </LogoContainer>
-
-        <SideBarToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
-      </NavContainer>
-      <SideBar isOpen={isOpen} />
-    </Wrapper>
+    <NavContainer>
+      <LogoContainer>
+        <QRCodeSvg />
+      </LogoContainer>
+      <SectionContainer>
+        <Section>Home</Section>
+        <Section>About Me</Section>
+        <Section>Work</Section>
+        <Section>Contact</Section>
+      </SectionContainer>
+      <EmailContainer>email</EmailContainer>
+    </NavContainer>
   )
 }
 
 export default Nav
 
-const NavContainer = tw.div`w-full h-16 bg-[var(--nav-background)] text-[var(--nav-primary)] flex items-center justify-between px-8`
-const LogoText = tw.div``
-const LogoContainer = tw.div`flex gap-4 items-center`
+const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2`
 
-const Wrapper = tw.div`flex justify-between`
+const LogoContainer = tw.div`flex gap-4 items-center`
+const Section = tw.div`hover:(underline text-underline-offset[2px]) `
+const SectionContainer = tw.div`flex justify-between gap-10`
+const EmailContainer = tw.div``

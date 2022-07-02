@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #0c0c26;
+  --color-secondary: #4f4e63;
+  --orbit-radius: 200px;
+  --electron-radius: 20px;
+  --avatar-radius: 125px;
+}
+
+.main_container {
+  max-width: 1400px;
+}

@@ -1,63 +1,51 @@
 import React from "react"
 import tw from "twin.macro"
 import avatar from "../../images/avatar2.png"
-import { motion } from "framer-motion"
 import { icons } from "../molecule/logos"
+import "../styles/module.hero.css"
 
 function Hero() {
-  const incrementor = (Math.PI * 2) / icons.length
-  const rotator = {
-    animate: {
-      rotate: 360,
-    },
-  }
-
-  const itemVariant = {
-    animate: i => ({
-      x: Math.cos(incrementor * i) * 200 - 20,
-      y: Math.sin(incrementor * i) * 200 - 20,
-
-      rotate: -360,
-      transition: {
-        rotate: { repeat: Infinity, ease: "linear", duration: 25 },
-      },
-    }),
-  }
   return (
     <Wrapper>
-      <GreyBackground>
-        <LogoContainer>
-          <Avatar src={avatar} />
-          <motion.div
-            className="rotator"
-            variants={rotator}
-            animate={"animate"}
-            transition={{
-              repeat: Infinity,
-              ease: "linear",
-              duration: 25,
-            }}
-          >
-            {icons.map((icon, i) => (
-              <motion.img
-                src={icon}
-                className="item"
-                variants={itemVariant}
-                custom={i}
-              />
-            ))}
-          </motion.div>
-        </LogoContainer>
-      </GreyBackground>
+      <HeroText>
+        <div tw="text-[var(--color-secondary)] text-2xl mb-2">
+          Hi, I'm Marcus
+        </div>
+        <div tw="text-7xl font-bold mb-10">
+          chemistry teacher turned web developer
+        </div>
+        <Button>Get in touch</Button>
+      </HeroText>
+      <AvatarContainer>
+        <img className="avatar" src={avatar} />
+        <OrbitContainer>
+          <div className="orbit orbit0">
+            <img src={icons[0]} className="electron electron0" />
+          </div>
+        </OrbitContainer>
+        <OrbitContainer>
+          <div className="orbit orbit1">
+            <img src={icons[1]} className="electron electron1" />
+          </div>
+        </OrbitContainer>
+        <OrbitContainer>
+          <div className="orbit orbit2">
+            <img src={icons[2]} className="electron electron2" />
+          </div>
+        </OrbitContainer>
+      </AvatarContainer>
     </Wrapper>
   )
 }
 
 export default Hero
 
-const Wrapper = tw.div`h-[600px] `
-const GreyBackground = tw.div`h-1/2 bg-[var(--grey-background)] relative`
+const Wrapper = tw.div`flex justify-between mx-14 mb-20`
 
-const Avatar = tw.img`w-[352px] h-[352px] rounded-full bg-white border-8 border-solid border-white`
+const HeroText = tw.div`flex flex-col flex-1`
 
-const LogoContainer = tw.div`absolute left-1/2 -translate-x-1/2 top-1/4`
+const Button = tw.button` w-52 h-16 font-bold bg-[var(--color-primary)] text-white rounded-full`
+
+const AvatarContainer = tw.div`w-[400px] h-[400px] relative transform-style[preserve-3d]`
+
+const OrbitContainer = tw.div`absolute top-0 left-0`
