@@ -1,7 +1,7 @@
 import React from "react"
 import tw from "twin.macro"
 import avatar from "../../images/avatar2.png"
-import { icons } from "../molecule/logos"
+import { icons } from "../atom/logos"
 import "../styles/module.hero.css"
 
 function Hero() {

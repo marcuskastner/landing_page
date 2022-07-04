@@ -1,16 +1,89 @@
-import React from "react"
+import React, { useState } from "react"
 import tw from "twin.macro"
 import "../styles/module.card.css"
+import { motion } from "framer-motion"
+import { icons } from "../atom/logos"
 
-function Card({ index }) {
-  const bg_Colors = ["#E9F8FF"]
+function Card({ data }) {
+  console.log(data)
+  const [showFront, setShowFront] = useState(true)
+
+  const cardVariants = {
+    animate: {
+      rotateY: 180,
+      transition: { duration: 1.5 },
+    },
+    initial: { rotateY: 0, transition: { duration: 1.5 } },
+  }
+
   return (
-    <CardContainer style={{ backgroundColor: bg_Colors[index] }}>
-      Card
-    </CardContainer>
+    <motion.div
+      className="card_container"
+      variants={cardVariants}
+      animate={showFront ? "initial" : "animate"}
+    >
+      <FrontContainer
+        style={{
+          background:
+            "linear-gradient(40deg,	rgba(67, 138, 243, 0.7),rgba(255, 242, 166, 0.7))",
+          backfaceVisibility: "hidden",
+        }}
+      >
+        <FrontContent
+          style={{
+            transform: "translateZ(80px)",
+            backfaceVisibility: "hidden",
+            textShadow: "0 0 6px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <FrontTitle>{data.title}</FrontTitle>
+          <Button
+            tw="border-white ease-in duration-300 hover:(  bg-white text-[#355cc9] )"
+            onClick={() => setShowFront(!showFront)}
+          >
+            Details
+          </Button>
+        </FrontContent>
+      </FrontContainer>
+      <BackContainer
+        style={{ transform: " rotateY(180deg) ", backfaceVisibility: "hidden" }}
+      >
+        <BackContent
+          style={{
+            transform: "translateZ(80px)",
+            backfaceVisibility: "hidden",
+          }}
+        >
+          <BackTitle>{data.title}</BackTitle>
+
+          <LogosContainer>
+            {data.tech.map(cont => (
+              <Logos src={icons[cont]} />
+            ))}
+          </LogosContainer>
+          <Description>{data.description}</Description>
+          <Button
+            tw="border-[#355cc9] ease-in duration-300 hover:(bg-[#355cc9] text-white )"
+            onClick={() => setShowFront(!showFront)}
+          >
+            &larr;
+          </Button>
+        </BackContent>
+      </BackContainer>
+    </motion.div>
   )
 }
 
 export default Card
 
-const CardContainer = tw.div`w-[450px] h-[600px] rounded transform-style[preserve-3d]`
+const FrontTitle = tw.div`uppercase text-2xl font-semibold`
+
+const Button = tw.div`px-8 py-4 border-2 rounded uppercase`
+const FrontContainer = tw.div`w-[500px] h-[360px] flex items-center justify-center transform-style[preserve-3d] rounded`
+const BackContainer = tw.div`w-[500px] h-[360px]  transform-style[preserve-3d] rounded absolute top-0 left-0 border-2 `
+const FrontContent = tw.div`flex flex-col justify-between gap-52 items-center text-white`
+const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[#355cc9] p-4`
+const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
+const LogosContainer = tw.div`flex justify-center h-8 divide-x-2 w-[120px]`
+const Logos = tw.img` px-5`
+const Description = tw.div`overflow-scroll h-32`
