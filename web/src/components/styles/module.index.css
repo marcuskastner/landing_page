@@ -1,12 +1,4 @@
-.card_container {
-  width: 500px;
-  height: 360px;
-  position: relative;
-  transform-style: preserve-3d;
-  perspective: 1500px;
-}
-
-.card_background {
+.hero_background {
   background-image: var(--gradient);
   background-size: 400%;
   animation: bg-animation 10s infinite alternate;

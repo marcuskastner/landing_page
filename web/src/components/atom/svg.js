@@ -8,7 +8,7 @@ export const QRCodeSvg = () => {
       x="0px"
       y="0px"
       viewBox="0 0 512 512"
-      fill="black"
+      fill="white"
       width={48}
     >
       <g>

@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { icons } from "../atom/logos"
 
 function Card({ data }) {
-  console.log(data)
   const [showFront, setShowFront] = useState(true)
 
   const cardVariants = {
@@ -23,9 +22,8 @@ function Card({ data }) {
       animate={showFront ? "initial" : "animate"}
     >
       <FrontContainer
+        className="card_background"
         style={{
-          background:
-            "linear-gradient(40deg,	rgba(67, 138, 243, 0.7),rgba(255, 242, 166, 0.7))",
           backfaceVisibility: "hidden",
         }}
       >
@@ -38,7 +36,7 @@ function Card({ data }) {
         >
           <FrontTitle>{data.title}</FrontTitle>
           <Button
-            tw="border-white ease-in duration-300 hover:(  bg-white text-[#355cc9] )"
+            tw="border-white ease-in duration-300 hover:(  bg-white text-[var(--color-primary)] )"
             onClick={() => setShowFront(!showFront)}
           >
             Details
@@ -63,7 +61,7 @@ function Card({ data }) {
           </LogosContainer>
           <Description>{data.description}</Description>
           <Button
-            tw="border-[#355cc9] ease-in duration-300 hover:(bg-[#355cc9] text-white )"
+            tw="border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white )"
             onClick={() => setShowFront(!showFront)}
           >
             &larr;
@@ -82,7 +80,7 @@ const Button = tw.div`px-8 py-4 border-2 rounded uppercase`
 const FrontContainer = tw.div`w-[500px] h-[360px] flex items-center justify-center transform-style[preserve-3d] rounded`
 const BackContainer = tw.div`w-[500px] h-[360px]  transform-style[preserve-3d] rounded absolute top-0 left-0 border-2 `
 const FrontContent = tw.div`flex flex-col justify-between gap-52 items-center text-white`
-const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[#355cc9] p-4`
+const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[var(--color-primary)] p-4`
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
 const LogosContainer = tw.div`flex justify-center h-8 divide-x-2 w-[120px]`
 const Logos = tw.img` px-5`

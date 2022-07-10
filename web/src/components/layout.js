@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-      <Nav />
+
       <div className="main_container">{children}</div>
     </>
   )
