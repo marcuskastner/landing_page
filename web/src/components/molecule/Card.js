@@ -78,7 +78,7 @@ const FrontTitle = tw.div`uppercase text-2xl font-semibold`
 
 const Button = tw.div`px-8 py-4 border-2 rounded uppercase`
 const FrontContainer = tw.div`w-[500px] h-[360px] flex items-center justify-center transform-style[preserve-3d] rounded`
-const BackContainer = tw.div`w-[500px] h-[360px]  transform-style[preserve-3d] rounded absolute top-0 left-0 border-2 `
+const BackContainer = tw.div`w-[500px] h-[360px]  transform-style[preserve-3d] rounded absolute top-0 left-0 border-2 bg-white `
 const FrontContent = tw.div`flex flex-col justify-between gap-52 items-center text-white`
 const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[var(--color-primary)] p-4`
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`

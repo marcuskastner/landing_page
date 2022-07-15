@@ -4,80 +4,73 @@ import Card from "../molecule/Card"
 import { card_data } from "../atom/card_data"
 import { motion, AnimatePresence } from "framer-motion"
 import { wrap } from "popmotion"
+import FadeIn from "./FadeIn"
 
 function Work() {
-  const [[page, direction], setPage] = useState([0, 0])
-
-  const paginate = newDirection => {
-    setPage([wrap(0, card_data.length, page + newDirection), newDirection])
-  }
-
+  const [page, setPage] = useState(0)
   const variants = {
-    enter: direction => {
-      return {
-        x: direction < 0 ? "50%" : "-50%",
-        opacity: 0,
-        scale: 0.8,
-      }
+    enter: {
+      z: 0,
+      scale: 0.1,
+      opacity: 0,
     },
     center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
+      z: 1,
       scale: 1,
+      opacity: 1,
     },
-    exit: direction => {
-      return {
-        zIndex: 0,
-        x: direction > 0 ? "50%" : "-50%",
-        opacity: 0,
-        scale: 0.8,
-      }
+    exit: {
+      z: 0,
+      scale: 1.5,
+      opacity: 0,
     },
   }
 
   return (
-    <Wrapper>
-      <div tw="relative">
-        <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
-          {card_data.map(
-            (data, index) =>
-              page === index && (
-                <motion.div
-                  variants={variants}
-                  custom={direction}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  key={index}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Card data={data} />
-                </motion.div>
-              )
-          )}
-        </AnimatePresence>
-        <div
-          tw="absolute left-[-50%] top[50%]"
-          onClick={() => {
-            paginate(-1)
-          }}
-        >
-          Left
-        </div>
-        <div
-          tw="absolute right-[-50%] top[50%]"
-          onClick={() => {
-            paginate(1)
-          }}
-        >
-          Right
-        </div>
-      </div>
-    </Wrapper>
+    <FadeIn>
+      <Wrapper>
+        <PaginationContainer>
+          <div tw="relative">
+            <AnimatePresence initial={false} exitBeforeEnter>
+              {card_data.map(
+                (data, index) =>
+                  page === index && (
+                    <motion.div
+                      variants={variants}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      key={index}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <Card data={data} />
+                    </motion.div>
+                  )
+              )}
+            </AnimatePresence>
+          </div>
+        </PaginationContainer>
+        <DotContainer>
+          {card_data.map((_, index) => (
+            <motion.div
+              tw="w-4 h-4 border-2 border-white rounded-full"
+              whileTap={{ scale: 0.8 }}
+              onClick={() => setPage(index)}
+              style={
+                index === page
+                  ? { backgroundColor: "white" }
+                  : { backgroundColor: "transparent" }
+              }
+            />
+          ))}
+        </DotContainer>
+      </Wrapper>
+    </FadeIn>
   )
 }
 
 export default Work
 
-const Wrapper = tw.div`flex justify-center mx-14 mb-20 gap-20`
+const Wrapper = tw.div`h-[800px] relative`
+const PaginationContainer = tw.div`absolute bottom-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2`
+const DotContainer = tw.div`absolute top-1/2  right-48 flex flex-col gap-4 border-2 rounded p-4`
