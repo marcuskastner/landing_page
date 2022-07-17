@@ -50,6 +50,6 @@ function About() {
 
 export default About
 
-const Wrapper = tw.div`flex justify-center mx-14 mb-20 gap-20`
-const TextContainer = tw.div`flex flex-col flex-1`
-const PlanetContainer = tw.div`w-1/2 relative`
+const Wrapper = tw.div`flex justify-between mx-14 mb-20 gap-20`
+const TextContainer = tw.div`flex flex-col flex-1 `
+const PlanetContainer = tw.div`hidden lg:(w-1/2 relative inline-block) `

@@ -19,8 +19,9 @@ function Hero() {
           </div>
           <Button>Get in touch</Button>
         </HeroText>
-
-        <motion.img src={Galaxy} className="image" style={{ rotateZ: y1 }} />
+        <GalaxyContainer>
+          <motion.img src={Galaxy} className="image" style={{ rotateZ: y1 }} />
+        </GalaxyContainer>
       </Wrapper>
     </FadeIn>
   )
@@ -28,8 +29,10 @@ function Hero() {
 
 export default Hero
 
-const Wrapper = tw.div`flex justify-between mx-14 mb-20`
+const Wrapper = tw.div`flex justify-between  mb-20 mx-14 `
 
 const HeroText = tw.div`flex flex-col flex-1`
 
 const Button = tw.button` w-52 h-16 font-bold bg-[var(--color-primary)] text-white rounded-full`
+
+const GalaxyContainer = tw.div`hidden lg:(inline-block)`

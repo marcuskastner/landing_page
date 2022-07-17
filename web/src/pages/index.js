@@ -11,13 +11,17 @@ import Contact from "../components/organism/Contact"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <Nav />
-    <Hero />
-    <About />
-    <Work />
-    <Contact />
+    <Wrapper>
+      <Seo title="Home" />
+      <Nav />
+      <Hero />
+      <About />
+      <Work />
+      <Contact />
+    </Wrapper>
   </Layout>
 )
 
 export default IndexPage
+
+const Wrapper = tw.div`max-w-[1400px]`
