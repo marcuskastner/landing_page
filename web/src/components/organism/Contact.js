@@ -4,9 +4,39 @@ import { SectionTitle } from "../styles/themes"
 import FadeIn from "./FadeIn"
 
 function Contact() {
-  const [name, setName] = useState("Full Name")
-  const [email, setEmail] = useState("email")
-  const [phone, setPhone] = useState("phone")
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  })
+
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    })
+  }
+
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
+
   return (
     <FadeIn>
       <Wrapper>
@@ -16,16 +46,20 @@ function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
-            action="/pages/success"
+            data-netlify-honeypot="bot-field"
+            action="/success"
+            onSubmit={handleSubmit}
           >
             <FieldContainer>
+              <input type="hidden" name="form-name" value="contact" />
               <Label>
                 Name
                 <Input
                   type="text"
                   name="name"
                   placeholder="full name"
-                  // onChange={e => setName(e.target.value)}
+                  onChange={handleChange}
+                  value={formState.name}
                 />
               </Label>
               <Label>
@@ -34,7 +68,8 @@ function Contact() {
                   type="email"
                   name="email"
                   placeholder="me@sample.com"
-                  // onChange={e => setEmail(e.target.value)}
+                  onChange={handleChange}
+                  value={formState.email}
                 />
               </Label>
               <Label>
@@ -43,7 +78,8 @@ function Contact() {
                   type="phone"
                   name="phone"
                   placeholder="123-456-789"
-                  // onChange={e => setPhone(e.target.value)}
+                  onChange={handleChange}
+                  value={formState.phone}
                 />
               </Label>
               <Label>
@@ -52,6 +88,8 @@ function Contact() {
                   type="text"
                   name="subject"
                   placeholder="type subject here"
+                  onChange={handleChange}
+                  value={formState.subject}
                 />
               </Label>
               <Label tw="col-span-2">
@@ -62,6 +100,9 @@ function Contact() {
                   placeholder="type message here"
                   rows={5}
                   cols={75}
+                  name="message"
+                  onChange={handleChange}
+                  value={formState.message}
                 />
               </Label>
               <BtnContainer>
