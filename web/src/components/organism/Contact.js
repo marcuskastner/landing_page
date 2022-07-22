@@ -12,7 +12,12 @@ function Contact() {
       <Wrapper>
         <SectionTitle>Contact Me</SectionTitle>
         <FormContainer>
-          <form name="contact" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            action="/pages/success"
+          >
             <FieldContainer>
               <Label>
                 Name

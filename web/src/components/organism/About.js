@@ -36,12 +36,7 @@ function About() {
           <SectionTitle tw="max-w-sm mb-10 text-white">
             I enjoy learning and creating a safe environment
           </SectionTitle>
-          <SectionText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            rem voluptate nisi dolores minima ad sunt maxime maiores non porro
-            necessitatibus doloribus, minus ullam quam placeat tenetur, possimus
-            aliquam unde?
-          </SectionText>
+          <SectionText></SectionText>
         </TextContainer>
       </Wrapper>
     </FadeIn>
