@@ -12,7 +12,7 @@ import Contact from "../components/organism/Contact"
 const IndexPage = () => (
   <Layout>
     <Wrapper>
-      <Seo title="Home" />
+      <Seo title="MK" />
       <Nav />
       <Hero />
       <About />
