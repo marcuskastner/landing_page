@@ -24,4 +24,4 @@ const IndexPage = () => (
 
 export default IndexPage
 
-const Wrapper = tw.div`max-w-[1400px]`
+const Wrapper = tw.div`max-w-[1400px] bg-[rgb(14,31,51,0.5)]`

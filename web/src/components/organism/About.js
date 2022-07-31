@@ -18,7 +18,7 @@ function About() {
 
   return (
     <FadeIn>
-      <Wrapper>
+      <Wrapper id="about">
         <PlanetContainer>
           <img src={Earth} tw="w-20 top-0 left-0 absolute" />
           <motion.img
@@ -36,7 +36,16 @@ function About() {
           <SectionTitle tw="max-w-sm mb-10 text-white">
             I enjoy learning and creating a safe environment
           </SectionTitle>
-          <SectionText></SectionText>
+          <SectionText tw="mb-10">
+            For the past year I have been teaching myself the ins and outs of
+            front end development. My past experience as a science teacher has
+            benefited me in developing the necissary skills of communication,
+            perseverance, and dedication.
+          </SectionText>
+          <SectionText tw="font-semibold text-2xl tracking-wide">
+            Technical Skills: HTML, CSS, Javascript, React, Gatsby, Sanity,
+            GraphQL, REST API, Firebase, React Native, Framer Motion, Git
+          </SectionText>
         </TextContainer>
       </Wrapper>
     </FadeIn>
@@ -45,6 +54,6 @@ function About() {
 
 export default About
 
-const Wrapper = tw.div`flex justify-between mx-14 mb-20 gap-20`
+const Wrapper = tw.div`flex justify-between mx-14 mb-48 gap-20`
 const TextContainer = tw.div`flex flex-col flex-1 `
 const PlanetContainer = tw.div`hidden lg:(w-1/2 relative inline-block) `

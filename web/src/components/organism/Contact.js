@@ -39,7 +39,7 @@ function Contact() {
 
   return (
     <FadeIn>
-      <Wrapper>
+      <Wrapper id="contact">
         <SectionTitle>Contact Me</SectionTitle>
         <FormContainer>
           <form

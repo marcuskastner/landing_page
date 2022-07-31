@@ -4,11 +4,11 @@
   perspective: 1500px;
 }
 
-.card_background {
+/* .card_background {
   background-image: var(--gradient);
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
-}
+} */
 
 @keyframes bg-animation {
   0% {

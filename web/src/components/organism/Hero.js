@@ -4,6 +4,7 @@ import Galaxy from "../../images/galaxy.svg"
 import "../styles/module.hero.css"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import FadeIn from "./FadeIn"
+import { SectionText } from "../styles/themes"
 
 function Hero() {
   const { scrollY } = useViewportScroll()
@@ -15,9 +16,17 @@ function Hero() {
         <HeroText>
           <div tw="text-white text-2xl mb-2">Hi, I'm Marcus</div>
           <div tw="text-7xl font-bold mb-10 text-white ">
-            science teacher turned web developer
+            science teacher turned front-end developer
           </div>
-          <Button>Get in touch</Button>
+          <SectionText tw="mb-10">
+            I bring the same attention and detail that I dedicated to my
+            students to my projects. I am dilligent, curious and attentive by
+            nature and will bring an inquisitive, fun and can do attitude to
+            your team.
+          </SectionText>
+          <a href="mailto:marcushkastner@gmail.com">
+            <Button>Get in touch</Button>
+          </a>
         </HeroText>
         <GalaxyContainer>
           <motion.img src={Galaxy} className="image" style={{ rotateZ: y1 }} />
@@ -29,7 +38,7 @@ function Hero() {
 
 export default Hero
 
-const Wrapper = tw.div`flex justify-between  mb-20 mx-14 `
+const Wrapper = tw.div`flex justify-between  mb-48 mx-14 gap-20`
 
 const HeroText = tw.div`flex flex-col flex-1`
 

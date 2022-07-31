@@ -5,7 +5,7 @@ import "../styles/module.nav.css"
 import { AnimatePresence, motion } from "framer-motion"
 import Email from "../../images/email.svg"
 import { SideBarToggle } from "../molecule/SideBarToggle"
-import { SideBarMenu } from "../molecule/SideBarMenu"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 function Nav() {
   const lineVariants = {
@@ -87,7 +87,6 @@ function Nav() {
     { name: "Work" },
     { name: "Contact" },
   ]
-  const [hoverHome, setHoverHome] = useState(false)
   const [hoverAbout, setHoverAbout] = useState(false)
   const [hoverWork, setHoverWork] = useState(false)
   const [hoverContact, setHoverContact] = useState(false)
@@ -121,22 +120,10 @@ function Nav() {
           </LogoContainer>
           <SectionContainer>
             <Section
-              onMouseLeave={() => setHoverHome(false)}
-              onMouseEnter={() => setHoverHome(true)}
-            >
-              Home
-              <motion.div
-                className="line"
-                variants={lineVariants}
-                initial={false}
-                animate={hoverHome ? "animate" : "initial"}
-              />
-            </Section>
-            <Section
               onMouseLeave={() => setHoverAbout(false)}
               onMouseEnter={() => setHoverAbout(true)}
             >
-              About Me
+              <AnchorLink to="/#about">About Me</AnchorLink>
               <motion.div
                 className="line"
                 variants={lineVariants}
@@ -148,7 +135,8 @@ function Nav() {
               onMouseLeave={() => setHoverWork(false)}
               onMouseEnter={() => setHoverWork(true)}
             >
-              Work
+              <AnchorLink to="/#work">Work</AnchorLink>
+
               <motion.div
                 className="line"
                 variants={lineVariants}
@@ -160,7 +148,8 @@ function Nav() {
               onMouseLeave={() => setHoverContact(false)}
               onMouseEnter={() => setHoverContact(true)}
             >
-              Contact
+              <AnchorLink to="/#contact">Contact</AnchorLink>
+
               <motion.div
                 className="line"
                 variants={lineVariants}
@@ -169,7 +158,9 @@ function Nav() {
               />
             </Section>
           </SectionContainer>
-          <EmailContainer className="email" src={Email} />
+          <a href="mailto:marcushkastner@gmail.com">
+            <EmailContainer className="email" src={Email} />
+          </a>
         </NavContainer>
       ) : (
         <>
@@ -223,5 +214,5 @@ const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2`
 
 const LogoContainer = tw.div`flex gap-4 items-center`
 const Section = tw.div`text-white relative`
-const SectionContainer = tw.div`flex justify-between gap-10`
+const SectionContainer = tw.div`flex justify-between gap-10 -translate-x-1/4`
 const EmailContainer = tw.img`w-6 h-6`
