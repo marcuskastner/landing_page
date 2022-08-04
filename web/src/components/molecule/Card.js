@@ -28,9 +28,9 @@ function Card({ data }) {
         }}
         tw="flex justify-center"
       >
-        <img src={data.background} tw="max-h-[400px] max-w-[700px]" />
+        <img src={data.background} tw="h-[400px]" />
 
-        <FrontTitle
+        {/* <FrontTitle
           tw="absolute top-5 left-1/2 "
           style={{
             transform: "translateZ(80px) translateX(-46px)",
@@ -39,10 +39,10 @@ function Card({ data }) {
           }}
         >
           {data.title}
-        </FrontTitle>
+        </FrontTitle> */}
 
         <Button
-          tw="border-white ease-in duration-300 hover:(  bg-white text-[var(--color-primary)] ) absolute bottom-5  left-1/2"
+          tw="border-white text-white ease-in duration-300 hover:(  bg-white text-[var(--color-primary)] ) absolute bottom-5  left-1/2"
           style={{
             transform: "translateZ(80px) translateX(-68px)",
             backfaceVisibility: "hidden",

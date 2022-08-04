@@ -20,7 +20,7 @@ function Hero() {
           </div>
           <SectionText tw="mb-10">
             I bring the same attention and detail that I dedicated to my
-            students to my projects. I am dilligent, curious and attentive by
+            students to my projects. I am dilligent, curious and detailed by
             nature and will bring an inquisitive, fun and can do attitude to
             your team.
           </SectionText>

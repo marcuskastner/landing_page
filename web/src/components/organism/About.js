@@ -8,13 +8,13 @@ import FadeIn from "./FadeIn"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 function About() {
-  const ymin = 400
-  const ymax = 800
+  const ymin = 600
+  const ymax = 1000
   const { scrollY } = useViewportScroll()
   const y2 = useTransform(scrollY, [ymin, ymax], [0, 30])
   const y3 = useTransform(scrollY, [ymin, ymax], [0, -70])
-  const y4 = useTransform(scrollY, [ymin, ymax], [0, -300])
-  const scale = useTransform(scrollY, [ymin, ymax], [1, 0.4])
+  const y4 = useTransform(scrollY, [ymin, ymax], [0, -500])
+  const scale = useTransform(scrollY, [ymin, ymax], [1, 0.2])
 
   return (
     <FadeIn>
@@ -34,17 +34,21 @@ function About() {
         </PlanetContainer>
         <TextContainer>
           <SectionTitle tw="max-w-sm mb-10 text-white">
-            I enjoy learning and creating a safe environment
+            I will bring curiosity, drive and agency to your team
           </SectionTitle>
           <SectionText tw="mb-10">
-            For the past year I have been teaching myself the ins and outs of
-            front end development. My past experience as a science teacher has
-            benefited me in developing the necissary skills of communication,
+            As a freelance developer I need to solve my own problems and
+            communicate effectively and efficeantly with my clients.
+            Furthermore, my past experience as a science teacher has benefited
+            me in developing the necissary skills of communication,
             perseverance, and dedication.
           </SectionText>
-          <SectionText tw="font-semibold text-2xl tracking-wide">
-            Technical Skills: HTML, CSS, Javascript, React, Gatsby, Sanity,
-            GraphQL, REST API, Firebase, React Native, Framer Motion, Git
+          <SectionText tw="font-semibold text-2xl tracking-wide mb-8">
+            Technical Skills: HTML, CSS, Javascript, React,
+          </SectionText>
+          <SectionText>
+            Other Skills: Gatsby, Sanity, GraphQL, REST API, Firebase, React
+            Native, Framer Motion, Git
           </SectionText>
         </TextContainer>
       </Wrapper>
