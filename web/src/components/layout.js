@@ -9,15 +9,13 @@ import React from "react"
 import { GlobalStyles } from "twin.macro"
 import Nav from "./organism/Nav"
 import "./styles/layout.css"
-import Footer from "./organism/Footer"
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
 
-      <div className="main_container">{children}</div>
-      <Footer />
+      <div>{children}</div>
     </>
   )
 }

@@ -8,20 +8,22 @@ import Work from "../components/organism/Work"
 import Nav from "../components/organism/Nav"
 import "../components/styles/module.index.css"
 import Contact from "../components/organism/Contact"
+import Footer from "../components/organism/Footer"
 
 const IndexPage = () => (
   <Layout>
-    <Wrapper>
+    <Wrapper className="main_Container">
       <Seo title="MK" />
       <Nav />
       <Hero />
       <About />
       <Work />
       <Contact />
+      <Footer />
     </Wrapper>
   </Layout>
 )
 
 export default IndexPage
 
-const Wrapper = tw.div`max-w-[1400px] bg-[rgb(14,31,51,0.5)]`
+const Wrapper = tw.div`max-w-[1400px] absolute top-[-1px] left-0 w-full overflow-scroll`

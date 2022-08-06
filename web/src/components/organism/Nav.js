@@ -176,7 +176,7 @@ function Nav() {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                tw="w-full h-full bg-white absolute top-0 flex justify-center items-center"
+                tw="w-full h-full bg-white absolute top-0 flex justify-center "
                 variants={menuBackground}
                 initial="initial"
                 animate="open"
@@ -184,7 +184,7 @@ function Nav() {
               >
                 <motion.ul
                   variants={listVariants}
-                  tw="font-bold text-[#142846] text-3xl"
+                  tw="font-bold text-[#142846] text-3xl py-20"
                 >
                   {linksArr.map(link => (
                     <motion.li variants={itemVariants}>
@@ -210,7 +210,7 @@ function Nav() {
 
 export default Nav
 
-const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2`
+const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2 `
 
 const LogoContainer = tw.div`flex gap-4 items-center`
 const Section = tw.div`text-white relative`

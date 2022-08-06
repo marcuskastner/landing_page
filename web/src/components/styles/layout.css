@@ -15,12 +15,3 @@
   );
   --background-secondary: #f6f9fc;
 }
-
-.main_container {
-  background-image: url("../../images/background.svg");
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-}
