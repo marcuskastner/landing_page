@@ -34,13 +34,13 @@ function About() {
         </PlanetContainer>
         <TextContainer>
           <SectionTitle tw="max-w-sm mb-10 text-white">
-            I will bring curiosity, drive and agency to your team
+            I will bring curiosity, drive and agency to your team.
           </SectionTitle>
           <SectionText tw="mb-10">
             As a freelance developer I need to solve my own problems and
-            communicate effectively and efficeantly with my clients.
+            communicate effectively and efficiently with my clients.
             Furthermore, my past experience as a science teacher has benefited
-            me in developing the necissary skills of communication,
+            me in developing the necessary skills of communication,
             perseverance, and dedication.
           </SectionText>
           <SectionText tw="font-semibold text-2xl tracking-wide mb-8">
