@@ -82,10 +82,9 @@ function Nav() {
   }
 
   const linksArr = [
-    { name: "Home" },
-    { name: "About Me" },
-    { name: "Work" },
-    { name: "Contact" },
+    { name: "About Me", link: "/#about" },
+    { name: "Work", link: "/#work" },
+    { name: "Contact", link: "/#contact" },
   ]
   const [hoverAbout, setHoverAbout] = useState(false)
   const [hoverWork, setHoverWork] = useState(false)
@@ -192,8 +191,9 @@ function Nav() {
                         whileHover="hover"
                         whileTap="tap"
                         variants={itemVariants}
+                        onClick={() => setIsOpen(false)}
                       >
-                        {link.name}
+                        <AnchorLink to={link.link}>{link.name}</AnchorLink>
                       </motion.button>
                     </motion.li>
                   ))}

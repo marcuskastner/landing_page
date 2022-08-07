@@ -9,7 +9,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 
 function About() {
   const ymin = 600
-  const ymax = 1000
+  const ymax = 1200
   const { scrollY } = useViewportScroll()
   const y2 = useTransform(scrollY, [ymin, ymax], [0, 30])
   const y3 = useTransform(scrollY, [ymin, ymax], [0, -70])

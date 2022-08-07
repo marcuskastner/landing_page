@@ -72,6 +72,6 @@ function Work() {
 
 export default Work
 
-const Wrapper = tw.div`flex gap-20 flex-col items-center px-10 mb-48`
+const Wrapper = tw.div`flex gap-10 flex-col items-center px-10 mb-48`
 const PaginationContainer = tw.div`w-full max-w-[700px]`
 const DotContainer = tw.div` flex justify-around border-2 rounded p-4 w-24 `
