@@ -1,17 +1,5 @@
 :root {
   --color-primary: #0c0c26;
   --color-secondary: #4f4e63;
-  --orbit-radius: 200px;
-  --electron-radius: 20px;
-  --avatar-radius: 125px;
-  --gradient: linear-gradient(
-    45deg,
-    #845ec2,
-    #d65db1,
-    #ff6f91,
-    #ff9671,
-    #ffc75f,
-    #f9f871
-  );
   --background-secondary: #f6f9fc;
 }
