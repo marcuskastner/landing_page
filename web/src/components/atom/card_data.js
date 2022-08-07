@@ -13,7 +13,7 @@ export const card_data = [
   {
     title: "React Native App",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, revoluptate nisi dolores minima ad sunt maxime maiores non porro necessitatibus doloribus, minus ullam quam placeat tenetur, possimus aliquam unde?",
+      "This is a react native marketplace app. I wanted to complete this project because I was interested in react native app developement. Furthermore, the app is integrated with Firebase Auth service to handle secure client login. Similarly to my other projects this required me to read through documentation and solve my own problems when they arise. I think this project shows I am interested in many different types of front end technologies and am constatly pushing myself to learn more.",
     tech: [4, 5, 3],
     background: work2,
   },

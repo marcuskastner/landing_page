@@ -15,7 +15,7 @@ function Hero() {
       <Wrapper>
         <HeroText>
           <div tw="text-white text-2xl mb-2">Hi, I'm Marcus</div>
-          <div tw="text-7xl font-bold mb-10 text-white ">
+          <div tw="text-5xl md:text-7xl font-bold mb-10 text-white ">
             science teacher turned front-end developer
           </div>
           <SectionText tw="mb-10">

@@ -29,7 +29,7 @@ function Work() {
   return (
     <FadeIn>
       <Wrapper id="work">
-        <SectionTitle>Work Examples</SectionTitle>
+        <SectionTitle>Work Samples</SectionTitle>
         <PaginationContainer>
           <div tw="relative">
             <AnimatePresence initial={false} exitBeforeEnter>
@@ -54,15 +54,17 @@ function Work() {
         <DotContainer>
           {card_data.map((_, index) => (
             <motion.div
-              tw="w-4 h-4 border-2 border-white rounded-full"
+              tw="w-6 h-6 text-white flex justify-center items-center rounded-full"
               whileTap={{ scale: 0.8 }}
               onClick={() => setPage(index)}
               style={
                 index === page
-                  ? { backgroundColor: "white" }
-                  : { backgroundColor: "transparent" }
+                  ? { fontWeight: "semiBold", border: "2px white solid" }
+                  : { fontWeight: "normal" }
               }
-            />
+            >
+              {index + 1}
+            </motion.div>
           ))}
         </DotContainer>
       </Wrapper>
@@ -74,4 +76,4 @@ export default Work
 
 const Wrapper = tw.div`flex gap-10 flex-col items-center px-10 mb-48`
 const PaginationContainer = tw.div`w-full max-w-[700px]`
-const DotContainer = tw.div` flex justify-around border-2 rounded p-4 w-24 `
+const DotContainer = tw.div` flex justify-around border-2 rounded p-4 w-24`
