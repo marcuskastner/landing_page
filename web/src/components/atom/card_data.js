@@ -3,20 +3,18 @@ import work2 from "../../images/work/native_app.png"
 
 export const card_data = [
   {
-    title: "Work 1",
+    title: "Ecommerce Site",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, revoluptate nisi dolores minima ad sunt maxime maiores non porro necessitatibus doloribus, minus ullam quam placeat tenetur, possimus aliquam unde?Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, revoluptate nisi dolores minima ad sunt maxime maiores non porro necessitatibus doloribus, minus ullam quam placeat tenetur, possimus aliquam unde?	Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, revoluptate nisi dolores minima ad sunt maxime maiores non porro necessitatibus doloribus, minus ullam quam placeat tenetur, possimus aliquam unde?",
+      "This site could be used as a general template for any ecommerce application. It uses Gatsby on the front end and Sanity on the back end to pull all the product information. Making it extremely easy for clients to add or edit items in their store. Furthermore, the site is fully integrated with stripe to securely handle payments. I think the biggest accomplishment for myself with this project was that I had to go into Gatsby, Sanity and Stripe's documentation and solve my own problems because information and tutorials on the web for these tools is usually spares and or outdated. Also I designed this project from the ground up meaning I used XD to personally design the wireframes and user experience. Overally I am really happy with the project and I feel that it went a long way towards showing my proficiencies as a well rounded web developer.",
     tech: [0, 1, 2],
-    type: "ecomerce",
     background: work1,
   },
 
   {
-    title: "Work 2",
+    title: "React Native App",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, revoluptate nisi dolores minima ad sunt maxime maiores non porro necessitatibus doloribus, minus ullam quam placeat tenetur, possimus aliquam unde?",
     tech: [4, 5, 3],
-    type: "ecomerce",
     background: work2,
   },
 ]

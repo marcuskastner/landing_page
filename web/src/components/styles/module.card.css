@@ -3,18 +3,3 @@
   transform-style: preserve-3d;
   perspective: 1500px;
 }
-
-/* .card_background {
-  background-image: var(--gradient);
-  background-size: 400%;
-  animation: bg-animation 5s infinite alternate;
-} */
-
-@keyframes bg-animation {
-  0% {
-    background-position: left;
-  }
-  100% {
-    background-position: right;
-  }
-}
