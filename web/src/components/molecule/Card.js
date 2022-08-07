@@ -26,7 +26,7 @@ function Card({ data }) {
         style={{
           backfaceVisibility: "hidden",
         }}
-        tw="flex flex-col items-center  bg-white "
+        tw="flex flex-col items-center justify-around  bg-white h-[400px]"
       >
         <FrontTitle
           style={{
@@ -37,11 +37,11 @@ function Card({ data }) {
         >
           {data.title}
         </FrontTitle>
-
-        <img src={data.background} tw="max-h-[400px] mb-6" />
-
+        <div tw="h-[50%]">
+          <img src={data.background} tw="max-w-full max-h-full" />
+        </div>
         <Button
-          tw=" border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white )mb-12"
+          tw=" border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white ) "
           style={{
             transform: "translateZ(80px) ",
             backfaceVisibility: "hidden",
@@ -83,7 +83,7 @@ function Card({ data }) {
 
 export default Card
 
-const FrontTitle = tw.div`uppercase text-2xl font-semibold mt-12`
+const FrontTitle = tw.div`uppercase text-2xl font-semibold`
 
 const Button = tw.div`px-8 py-4 border-2 rounded uppercase border-black`
 const FrontContainer = tw.div` transform-style[preserve-3d]`
@@ -91,6 +91,6 @@ const BackContainer = tw.div`  transform-style[preserve-3d] rounded absolute top
 const FrontContent = tw.div`relative`
 const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[var(--color-primary)] p-4`
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
-const LogosContainer = tw.div`flex justify-center h-8 divide-x-2 w-[120px]`
-const Logos = tw.img` px-5`
-const Description = tw.div``
+const LogosContainer = tw.div`flex justify-center `
+const Logos = tw.img`h-8 w-8 mx-8`
+const Description = tw.div`overflow-scroll h-[200px]`
