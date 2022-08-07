@@ -3,8 +3,8 @@ import tw from "twin.macro"
 import Card from "../molecule/Card"
 import { card_data } from "../atom/card_data"
 import { motion, AnimatePresence } from "framer-motion"
-import { wrap } from "popmotion"
 import FadeIn from "./FadeIn"
+import { SectionTitle } from "../styles/themes.js"
 
 function Work() {
   const [page, setPage] = useState(0)
@@ -29,9 +29,7 @@ function Work() {
   return (
     <FadeIn>
       <Wrapper id="work">
-        <div tw="text-white flex justify-center mb-16 font-semibold text-3xl">
-          Work Examples
-        </div>
+        <SectionTitle>Work Examples</SectionTitle>
         <PaginationContainer>
           <div tw="relative">
             <AnimatePresence initial={false} exitBeforeEnter>

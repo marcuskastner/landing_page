@@ -94,7 +94,7 @@ function Contact() {
               <Label tw="col-span-2">
                 Message
                 <textarea
-                  tw="rounded p-2 text-black"
+                  tw="rounded p-2 text-black w-full"
                   maxLength={375}
                   placeholder="type message here"
                   rows={5}
@@ -119,8 +119,8 @@ export default Contact
 
 const Wrapper = tw.div`flex flex-col gap-8 items-center text-white relative mb-52 px-10`
 const FormContainer = tw.div`border-2 border-white rounded p-4 lg:p-12 `
-const FieldContainer = tw.div`grid grid-cols-2 gap-x-8 gap-y-8 lg:gap-x-20`
-const Label = tw.label`flex flex-col gap-2`
+const FieldContainer = tw.div`flex flex-col items-center gap-8 sm:(grid  grid-cols-2 ) lg:gap-x-20`
+const Label = tw.label`flex flex-col gap-2 w-full`
 const Input = tw.input` rounded p-2 text-black`
 const SubmitBtn = tw.button`no-underline bg-white text-black px-16 py-2 rounded`
 const BtnContainer = tw.div`col-span-2 flex justify-center`

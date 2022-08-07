@@ -18,9 +18,7 @@ function About() {
 
   return (
     <FadeIn>
-      <div tw="text-white flex justify-center mb-16 font-semibold text-3xl">
-        About Me
-      </div>
+      <SectionTitle tw="flex justify-center mb-20">About Me</SectionTitle>
       <Wrapper id="about">
         <PlanetContainer>
           <img src={Earth} tw="w-20 top-0 left-0 absolute" />
@@ -36,9 +34,9 @@ function About() {
           />
         </PlanetContainer>
         <TextContainer>
-          <SectionTitle tw="max-w-sm mb-10 text-white">
+          <div tw=" mb-10 text-white text-2xl lg:max-w-sm">
             I will bring curiosity, drive and agency to your team.
-          </SectionTitle>
+          </div>
           <SectionText tw="mb-10">
             As a freelance developer I need to solve my own problems and
             communicate effectively and efficiently with my clients.
