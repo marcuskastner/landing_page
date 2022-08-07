@@ -42,6 +42,6 @@ const Wrapper = tw.div`flex justify-between  mb-48 mx-14 gap-20`
 
 const HeroText = tw.div`flex flex-col flex-1`
 
-const Button = tw.button` w-52 h-16 font-bold bg-[#241A60] text-white rounded-full`
+const Button = tw.button` w-52 h-16 font-bold text-[#241A60] bg-white rounded-full`
 
 const GalaxyContainer = tw.div`hidden lg:(inline-block)`

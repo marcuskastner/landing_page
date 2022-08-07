@@ -6,7 +6,7 @@ import Github from "../../images/footer/github.png"
 function Footer() {
   return (
     <Wrapper>
-      <div tw="flex justify-between px-8">
+      <div tw="flex justify-between items-center px-8">
         <a href="mailto:marcushkastner@gmail.com" tw="text-white">
           marcushkastner@gmail
         </a>

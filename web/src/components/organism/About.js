@@ -18,6 +18,9 @@ function About() {
 
   return (
     <FadeIn>
+      <div tw="text-white flex justify-center mb-16 font-semibold text-3xl">
+        About Me
+      </div>
       <Wrapper id="about">
         <PlanetContainer>
           <img src={Earth} tw="w-20 top-0 left-0 absolute" />

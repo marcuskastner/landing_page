@@ -29,6 +29,9 @@ function Work() {
   return (
     <FadeIn>
       <Wrapper id="work">
+        <div tw="text-white flex justify-center mb-16 font-semibold text-3xl">
+          Work Examples
+        </div>
         <PaginationContainer>
           <div tw="relative">
             <AnimatePresence initial={false} exitBeforeEnter>
