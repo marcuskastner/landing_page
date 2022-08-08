@@ -54,7 +54,7 @@ function Work() {
         <DotContainer>
           {card_data.map((_, index) => (
             <motion.div
-              tw="w-6 h-6 text-white flex justify-center items-center rounded-full"
+              tw="w-6 h-6 text-white flex justify-center items-center rounded-full "
               whileTap={{ scale: 0.8 }}
               onClick={() => setPage(index)}
               style={
@@ -76,4 +76,4 @@ export default Work
 
 const Wrapper = tw.div`flex gap-10 flex-col items-center px-10 mb-48`
 const PaginationContainer = tw.div`w-full max-w-[700px]`
-const DotContainer = tw.div` flex justify-around border-2 rounded p-4 w-24`
+const DotContainer = tw.div` flex justify-around border-2 rounded p-4  gap-4`

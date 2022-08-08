@@ -1,7 +1,16 @@
 import work1 from "../../images/work/climbing_site.png"
 import work2 from "../../images/work/native_app.png"
+import work3 from "../../images/work/there_alongside.svg"
 
 export const card_data = [
+  {
+    title: "There Alongside",
+    description:
+      "I am currently contracted to build the web platform for There Alongside, a digital design brand. The site uses Gatsby on the front end and Sanity on the back end. This makes it easy and convienient for my client to add information to about the artists they represent. My biggest learning in this project was my utilization of Framer Motion, which is a react animation library. I needed to comb through the documentation and problem solve to accomplish the effects my client was looking for. I collaborate weekly with my client to develop the desired UI/ UX from storyboards.",
+    tech: [0, 1, 2],
+    background: work3,
+  },
+
   {
     title: "Ecommerce Site",
     description:
