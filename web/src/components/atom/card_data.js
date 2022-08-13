@@ -1,6 +1,6 @@
 import work1 from "../../images/work/climbing_site.png"
 import work2 from "../../images/work/native_app.png"
-import work3 from "../../images/work/there_alongside.svg"
+import work3 from "../../images/work/there_alongside.png"
 
 export const card_data = [
   {

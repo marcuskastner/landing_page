@@ -1,6 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
-import Galaxy from "../../images/galaxy.svg"
+import Galaxy from "../../images/hero/galaxy.svg"
 import "../styles/module.hero.css"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import FadeIn from "./FadeIn"

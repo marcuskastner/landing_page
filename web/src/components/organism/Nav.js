@@ -3,7 +3,7 @@ import tw from "twin.macro"
 import Logo from "../../images/nav/marcuskastner.svg"
 import "../styles/module.nav.css"
 import { AnimatePresence, motion } from "framer-motion"
-import Email from "../../images/email.svg"
+import Email from "../../images/nav/email.svg"
 import { SideBarToggle } from "../molecule/SideBarToggle"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
