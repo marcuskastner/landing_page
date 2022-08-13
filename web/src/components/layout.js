@@ -8,12 +8,13 @@
 import React from "react"
 import { GlobalStyles } from "twin.macro"
 import "./styles/layout.css"
+import Seo from "./seo"
 
 const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyles />
-
+<Seo/>
       <div>{children}</div>
     </>
   )

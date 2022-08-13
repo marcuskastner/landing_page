@@ -6,7 +6,7 @@ export const card_data = [
   {
     title: "There Alongside",
     description:
-      "I am currently contracted to build the web platform for There Alongside, a digital design brand. The site uses Gatsby on the front end and Sanity on the back end. This makes it easy and convienient for my client to add information to about the artists they represent. My biggest learning in this project was my utilization of Framer Motion, which is a react animation library. I needed to comb through the documentation and problem solve to accomplish the effects my client was looking for. I collaborate weekly with my client to develop the desired UI/ UX from storyboards.",
+      "I am currently contracted to build the web platform for There Alongside, a digital design brand. The site uses Gatsby on the front end and Sanity on the back end. This makes it easy and convienient for my client to add information to about the artists they represent. I collaborate weekly with my client to develop the desired UI/ UX from storyboards. My client wanted complicated animations as part of their user experience. To accomplish this I have been utiliing framer-motion. ",
     tech: [0, 1, 2],
     background: work3,
   },
@@ -14,7 +14,7 @@ export const card_data = [
   {
     title: "Ecommerce Site",
     description:
-      "This site could be used as a general template for any ecommerce application. It uses Gatsby on the front end and Sanity on the back end to pull all the product information. Making it extremely easy for clients to add or edit items in their store. Furthermore, the site is fully integrated with stripe to securely handle payments. I think the biggest accomplishment for myself with this project was that I had to go into Gatsby, Sanity and Stripe's documentation and solve my own problems because information and tutorials on the web for these tools is usually spares and or outdated. Also I designed this project from the ground up meaning I used XD to personally design the wireframes and user experience. Overally I am really happy with the project and I feel that it went a long way towards showing my proficiencies as a well rounded web developer.",
+      "This site could be used as a general template for any ecommerce application. It uses Gatsby on the front end and Sanity on the back end to pull all product information. Making it extremely easy for clients to add or edit items in their store. Furthermore, the site is fully integrated with stripe to securely handle payments. I think the biggest accomplishment for myself with this project was reading Gatsby, Sanity and Stripe's documentation to implement their API's. Furthermore, I took on the role of UI designer using XD to build user stories.",
     tech: [0, 1, 2],
     background: work1,
   },
@@ -22,7 +22,7 @@ export const card_data = [
   {
     title: "React Native App",
     description:
-      "This is a react native marketplace app. I wanted to complete this project because I was interested in react native app developement. Furthermore, the app is integrated with Firebase Auth service to handle secure client login. Similarly to my other projects this required me to read through documentation and solve my own problems when they arise. I think this project shows I am interested in many different types of front end technologies and am constatly pushing myself to learn more.",
+      "This is a react native marketplace app. Furthermore, the app is integrated with Firebase Auth service to handle secure client login. Similarly to my other projects this required me to read through documentation and solve my own problems as they arise. I think this project shows I am interested in many different types of front end technologies and am constatly pushing myself to learn more.",
     tech: [4, 5, 3],
     background: work2,
   },

@@ -19,10 +19,9 @@ function Hero() {
             science teacher turned front-end developer
           </div>
           <SectionText tw="mb-10">
-            I bring the same attention and detail that I dedicated to my
-            students to my projects. I am dilligent, curious and detailed by
-            nature and will bring an inquisitive, fun and can do attitude to
-            your team.
+            Freelance Front End Developer with a passion for design and
+            creativity. I love creating interesting and unique experiences
+            through software and working with designers.
           </SectionText>
           <a href="mailto:marcushkastner@gmail.com">
             <Button>Get in touch</Button>
