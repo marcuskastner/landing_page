@@ -12,10 +12,10 @@ function Footer() {
         </a>
         <div tw="flex gap-4">
           <a href="https://www.linkedin.com/in/marcus-kastner/">
-            <img src={LinkedIn} />
+            <img src={LinkedIn} target="_blank" />
           </a>
           <a href="https://github.com/marcuskastner">
-            <img src={Github} />
+            <img src={Github} target="_blank" />
           </a>
         </div>
       </div>

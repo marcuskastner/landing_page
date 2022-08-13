@@ -3,6 +3,8 @@ import tw from "twin.macro"
 import "../styles/module.card.css"
 import { motion } from "framer-motion"
 import { icons } from "../atom/logos"
+import Github_Icon from "../../images/icons/github.png"
+import Link_Icon from "../../images/icons/link.png"
 
 function Card({ data }) {
   const [showFront, setShowFront] = useState(true)
@@ -72,6 +74,18 @@ function Card({ data }) {
             ))}
           </LogosContainer>
           <Description>{data.description}</Description>
+          <LinksContainer>
+            {data.github && (
+              <a href={data.github} target="_blank">
+                <img src={Github_Icon} tw="w-8 h-8" />
+              </a>
+            )}
+            {data.link && (
+              <a href={data.link} target="_blank">
+                <img src={Link_Icon} tw="w-8 h-8" />
+              </a>
+            )}
+          </LinksContainer>
           <Button
             tw="border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white )"
             onClick={() => setShowFront(!showFront)}
@@ -91,9 +105,9 @@ const FrontTitle = tw.div`uppercase text-2xl font-semibold`
 const Button = tw.div`px-8 py-4 border-2 rounded uppercase border-black`
 const FrontContainer = tw.div` transform-style[preserve-3d]`
 const BackContainer = tw.div`  transform-style[preserve-3d] rounded absolute top-0 left-0 border-2 bg-white `
-const FrontContent = tw.div`relative`
 const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-[var(--color-primary)] p-4`
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
 const LogosContainer = tw.div`flex justify-center `
 const Logos = tw.img`h-8 w-8 mx-8`
-const Description = tw.div`overflow-scroll h-[200px]`
+const Description = tw.div`overflow-scroll h-[100px]`
+const LinksContainer = tw.div`flex justify-between gap-8`

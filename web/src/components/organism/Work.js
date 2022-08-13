@@ -54,7 +54,7 @@ function Work() {
         <DotContainer>
           {card_data.map((_, index) => (
             <motion.div
-              tw="w-6 h-6 text-white flex justify-center items-center rounded-full "
+              tw="w-8 h-8 text-white flex justify-center items-center rounded-full "
               whileTap={{ scale: 0.8 }}
               onClick={() => setPage(index)}
               style={
