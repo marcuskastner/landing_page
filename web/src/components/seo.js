@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 function SEO() {
   const { site } = useStaticQuery(
@@ -35,6 +36,13 @@ function SEO() {
       <meta name="og:image" content={image} />
     </Helmet>
   )
+}
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  slug: PropTypes.string,
 }
 
 export default SEO
