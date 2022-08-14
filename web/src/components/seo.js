@@ -30,10 +30,10 @@ function SEO() {
   return (
     <Helmet htmlAttributes={{ lang: `en` }} titleTemplate={`${title}`}>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="og:site_name" content={title} />
-      <meta name="og:type" content="website" />
-      <meta name="og:image" content={image} />
+      <meta property="og:title" content={title} />
+      <meta property="og:image" content={image} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content="https://marcus-kastner.netlify.app/" />
     </Helmet>
   )
 }
