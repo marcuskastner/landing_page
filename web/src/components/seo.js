@@ -35,7 +35,7 @@ function SEO() {
       <meta property="og:image" content={Meta_Cover} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content="https://marcus-kastner.netlify.app/" />
-      <meta property="og:author" content={author} />
+      <meta name="author" content={author} />
     </Helmet>
   )
 }
