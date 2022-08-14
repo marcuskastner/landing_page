@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Marcus`,
-    description: `This is the personal web portfolio for Marcus Kastner. Scroll down to view my work samples and learn more about me.`,
+    title: `Marcus' Portfolio`,
+    description: `Scroll down to view my work samples and learn more about me.`,
     author: `Marcus Kastner`,
     keywords: "climbing, e-commerce, sanity, gatsby",
     image: "src/images/meta_cover.png",

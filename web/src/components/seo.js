@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO() {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,80 +18,23 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
+  const title = site.siteMetadata.title
+  const description = site.siteMetadata.description
   const image = site.siteMetadata.image
   const keywords = site.siteMetadata.keywords
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const author = site.siteMetadata.author
+
+  console.log(site)
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          name: `keywords`,
-          content: keywords,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    />
+    <Helmet htmlAttributes={{ lang: `en` }} titleTemplate={`${title}`}>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="og:site_name" content={title} />
+      <meta name="og:type" content="website" />
+      <meta name="og:image" content={image} />
+    </Helmet>
   )
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-// SEO.propTypes = {
-//   description: PropTypes.string,
-//   image: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired,
-// }
 
 export default SEO
