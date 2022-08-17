@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
 import tw from "twin.macro"
-import Logo from "../../images/nav/marcuskastner.svg"
 import "../styles/module.nav.css"
 import { AnimatePresence, motion } from "framer-motion"
 import Email from "../../images/nav/email.svg"
 import { SideBarToggle } from "../molecule/SideBarToggle"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { StaticImage } from "gatsby-plugin-image"
 
 function Nav() {
   const lineVariants = {
@@ -115,7 +115,7 @@ function Nav() {
       {isDesktop ? (
         <NavContainer>
           <LogoContainer>
-            <img src={Logo} width="200" />
+            <StaticImage src="../../images/nav/marcuskastner.svg" width={200} />
           </LogoContainer>
           <SectionContainer>
             <Section

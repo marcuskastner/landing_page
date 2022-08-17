@@ -26,8 +26,6 @@ function SEO() {
   const keywords = site.siteMetadata.keywords
   const author = site.siteMetadata.author
 
-  console.log(site)
-
   return (
     <Helmet htmlAttributes={{ lang: `en` }} titleTemplate={`${title}`}>
       <title>{title}</title>

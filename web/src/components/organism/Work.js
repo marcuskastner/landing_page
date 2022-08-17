@@ -1,12 +1,12 @@
 import React, { useState } from "react"
 import tw from "twin.macro"
 import Card from "../molecule/Card"
-import { card_data } from "../atom/card_data"
 import { motion, AnimatePresence } from "framer-motion"
 import FadeIn from "./FadeIn"
 import { SectionTitle } from "../styles/themes.js"
 
-function Work() {
+const Work = ({ card_data }) => {
+  console.log(card_data)
   const [page, setPage] = useState(0)
   const variants = {
     enter: {

@@ -1,10 +1,9 @@
 import React from "react"
 import tw from "twin.macro"
-import Galaxy from "../../images/hero/galaxy.svg"
-import "../styles/module.hero.css"
 import { motion, useTransform, useViewportScroll } from "framer-motion"
 import FadeIn from "./FadeIn"
 import { SectionText } from "../styles/themes"
+import { StaticImage } from "gatsby-plugin-image"
 
 function Hero() {
   const { scrollY } = useViewportScroll()
@@ -28,7 +27,14 @@ function Hero() {
           </a>
         </HeroText>
         <GalaxyContainer>
-          <motion.img src={Galaxy} className="image" style={{ rotateZ: y1 }} />
+          <motion.div style={{ rotateZ: y1 }}>
+            <StaticImage
+              src="../../images/hero/galaxy.svg"
+              placeholder="blurred"
+              layout="fixed"
+              width={500}
+            />
+          </motion.div>
         </GalaxyContainer>
       </Wrapper>
     </FadeIn>
