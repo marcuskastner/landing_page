@@ -3,10 +3,9 @@ import tw from "twin.macro"
 import Card from "../molecule/Card"
 import { motion, AnimatePresence } from "framer-motion"
 import FadeIn from "./FadeIn"
-import { SectionTitle } from "../styles/themes.js"
-
-const Work = ({ card_data }) => {
-  console.log(card_data)
+import { SectionTitle } from "../styles/themes"
+import { card_data } from "../atom/card_data"
+const Work = () => {
   const [page, setPage] = useState(0)
   const variants = {
     enter: {

@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { icons } from "../atom/logos"
 import Github_Icon from "../../images/icons/github.png"
 import Link_Icon from "../../images/icons/link.png"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 function Card({ data }) {
   const [showFront, setShowFront] = useState(true)
@@ -40,8 +39,8 @@ function Card({ data }) {
         >
           {data.title}
         </FrontTitle>
-        <div tw="h-[50%] w-[90%]">
-          <GatsbyImage image={data.image.asset.gatsbyImageData} />
+        <div tw="h-[50%]">
+          <img src={data.background} tw="max-h-full max-w-full" />
         </div>
         <Button
           tw=" border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white ) "

@@ -9,32 +9,8 @@ import Nav from "../components/organism/Nav"
 import "../components/styles/module.index.css"
 import Contact from "../components/organism/Contact"
 import Footer from "../components/organism/Footer"
-import { graphql } from "gatsby"
 
-export const query = graphql`
-  {
-    allSanityCard {
-      edges {
-        node {
-          image {
-            asset {
-              gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
-            }
-          }
-          github
-          link
-          tech
-          title
-          description
-        }
-      }
-    }
-  }
-`
-
-const IndexPage = ({ data }) => {
-  console.log(data.allSanityCard)
-  const card_data = data.allSanityCard.edges.map(cont => cont.node)
+const IndexPage = () => {
   return (
     <Layout>
       <Wrapper className="main_Container">
@@ -42,7 +18,7 @@ const IndexPage = ({ data }) => {
         <Nav />
         <Hero />
         <About />
-        <Work card_data={card_data} />
+        <Work />
         <Contact />
         <Footer />
       </Wrapper>
