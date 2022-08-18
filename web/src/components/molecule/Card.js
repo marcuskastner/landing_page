@@ -38,7 +38,7 @@ function Card({ data }) {
         }}
         tw="flex flex-col items-center justify-around  bg-white h-[400px]"
       >
-        <div tw="h-[55%] flex flex-col items-center">
+        <div tw="h-[55%] w-[90%] flex flex-col items-center">
           <FrontTitle
             style={{
               transform: "translateZ(80px)",
