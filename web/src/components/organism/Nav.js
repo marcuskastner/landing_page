@@ -165,7 +165,7 @@ function Nav() {
         <>
           <div
             tw="bg-white z-10 absolute "
-            style={{ clipPath: "circle(24px at 31px 31px)" }}
+            style={{ clipPath: "circle(24px at 38px 38px)" }}
           >
             <SideBarToggle
               isOpen={isOpen}

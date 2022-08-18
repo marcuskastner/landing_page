@@ -18,7 +18,7 @@ function About() {
 
   return (
     <FadeIn>
-      <SectionTitle tw="flex justify-center mb-20">About Me</SectionTitle>
+      <SectionTitle tw="flex justify-center mb-10">About Me</SectionTitle>
       <Wrapper id="about">
         <PlanetContainer>
           <img src={Earth} tw="w-20 top-0 left-0 absolute" />
