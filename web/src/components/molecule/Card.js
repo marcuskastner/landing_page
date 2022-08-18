@@ -9,6 +9,14 @@ import Link_Icon from "../../images/icons/link.png"
 function Card({ data }) {
   const [showFront, setShowFront] = useState(true)
 
+  const [imageLoading, setImageLoading] = useState(true)
+  const [pulsing, setPulsing] = useState(true)
+
+  const imageLoaded = () => {
+    setImageLoading(false)
+    setTimeout(() => setPulsing(false), 600)
+  }
+
   const cardVariants = {
     animate: {
       rotateY: 180,
@@ -30,17 +38,21 @@ function Card({ data }) {
         }}
         tw="flex flex-col items-center justify-around  bg-white h-[400px]"
       >
-        <FrontTitle
-          style={{
-            transform: "translateZ(80px)",
-            backfaceVisibility: "hidden",
-            textShadow: "0 0 6px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          {data.title}
-        </FrontTitle>
-        <div tw="h-[50%]">
-          <img src={data.background} tw="max-h-full max-w-full" />
+        <div tw="h-[55%] flex flex-col items-center">
+          <FrontTitle
+            style={{
+              transform: "translateZ(80px)",
+              backfaceVisibility: "hidden",
+              textShadow: "0 0 6px rgba(0, 0, 0, 0.1)",
+            }}
+          >
+            {data.title}
+          </FrontTitle>
+
+          <img
+            src={data.background}
+            tw="max-h-full max-w-full border-2 border-black"
+          />
         </div>
         <Button
           tw=" border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white ) "
@@ -55,6 +67,7 @@ function Card({ data }) {
         </Button>
       </FrontContainer>
       <BackContainer
+        tw="h-[400px]"
         style={{ transform: " rotateY(180deg) ", backfaceVisibility: "hidden" }}
       >
         <BackContent
