@@ -17,7 +17,7 @@ Project is created with:
 * React
 * Gatsby
 * Sanity
-* Bootstrap
+* Tailwind
 * Framer-Motion
 
 ## What I Learned
