@@ -15,7 +15,7 @@ function Hero() {
         <HeroText>
           <div tw="text-white text-2xl mb-2">Hi, I'm Marcus</div>
           <div tw="text-5xl md:text-7xl font-bold mb-10 text-white ">
-            science teacher turned front-end developer
+            I bring ideas to life
           </div>
           <SectionText tw="mb-10">
             Freelance Front End Developer with a passion for design and

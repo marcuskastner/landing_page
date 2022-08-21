@@ -35,7 +35,7 @@ function About() {
         </PlanetContainer>
         <TextContainer>
           <div tw=" mb-10 text-white text-2xl lg:max-w-sm">
-            I will bring curiosity, drive and agency to your team.
+            I will bring curiosity, drive and initiative to your team.
           </div>
           <SectionText tw="mb-10">
             As a freelance developer I need to solve my own problems and
