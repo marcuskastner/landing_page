@@ -39,10 +39,9 @@ function About() {
           </div>
           <SectionText tw="mb-10">
             As a freelance developer I need to solve my own problems and
-            communicate effectively and efficiently with my clients.
-            Furthermore, my past experience as a science teacher has benefited
-            me in developing the necessary skills of communication,
-            perseverance, and dedication.
+            communicate effectively and efficiently with my clients. In, my past
+            experience as a science teacher has benefited me in developing the
+            necessary skills of communication, perseverance, and dedication.
           </SectionText>
           <SectionText tw="font-semibold text-2xl tracking-wide mb-8">
             Technical Skills: HTML, CSS, Javascript, React,
