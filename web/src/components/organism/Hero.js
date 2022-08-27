@@ -4,6 +4,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion"
 import FadeIn from "./FadeIn"
 import { SectionText } from "../styles/themes"
 import { StaticImage } from "gatsby-plugin-image"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 function Hero() {
   const { scrollY } = useViewportScroll()
@@ -14,17 +15,17 @@ function Hero() {
       <Wrapper>
         <HeroText>
           <div tw="text-white text-2xl mb-2">Hi, I'm Marcus</div>
-          <div tw="text-5xl md:text-7xl font-bold mb-10 text-white ">
+          <div tw="text-5xl md:text-7xl font-bold mb-10 text-white max-w-[400px]">
             I bring ideas to life
           </div>
           <SectionText tw="mb-10">
             Freelance Front End Developer with a passion for design and
             creativity. I love creating interesting and unique experiences
-            through software and working with designers.
+            through software and work with designers.
           </SectionText>
-          <a href="mailto:marcushkastner@gmail.com">
+          <AnchorLink to="/#contact">
             <Button>Get in touch</Button>
-          </a>
+          </AnchorLink>
         </HeroText>
         <GalaxyContainer>
           <motion.div style={{ rotateZ: y1 }}>

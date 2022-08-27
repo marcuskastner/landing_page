@@ -113,7 +113,7 @@ function Nav() {
   return (
     <>
       {isDesktop ? (
-        <NavContainer>
+        <NavContainer tw="sticky top-0 bg-[#0E1E36] z-50">
           <LogoContainer>
             <StaticImage src="../../images/nav/marcuskastner.svg" width={200} />
           </LogoContainer>
@@ -210,7 +210,7 @@ function Nav() {
 
 export default Nav
 
-const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2 `
+const NavContainer = tw.div`flex items-center justify-between px-8 mb-20 py-2`
 
 const LogoContainer = tw.div`flex gap-4 items-center`
 const Section = tw.div`text-white relative`

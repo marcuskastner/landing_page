@@ -119,5 +119,5 @@ const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
 const LogosContainer = tw.div`flex justify-center `
 const Logos = tw.img`h-8 w-8 mx-8`
-const Description = tw.div`overflow-scroll h-[100px]`
+const Description = tw.div` h-[100px]`
 const LinksContainer = tw.div`flex justify-between gap-8`

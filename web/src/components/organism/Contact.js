@@ -26,15 +26,19 @@ function Contact() {
   }
 
   const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState }),
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
+    if (Object.values(formState).some(value => value === ""))
+      alert("Please fill out all sections")
+    else {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formState }),
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error))
 
-    e.preventDefault()
+      e.preventDefault()
+    }
   }
 
   return (
@@ -56,7 +60,7 @@ function Contact() {
                 <Input
                   type="text"
                   name="name"
-                  placeholder="full name"
+                  placeholder="Full Name"
                   onChange={handleChange}
                   value={formState.name}
                 />
@@ -86,7 +90,7 @@ function Contact() {
                 <Input
                   type="text"
                   name="subject"
-                  placeholder="type subject here"
+                  placeholder="Type subject here"
                   onChange={handleChange}
                   value={formState.subject}
                 />
@@ -96,7 +100,7 @@ function Contact() {
                 <textarea
                   tw="rounded p-2 text-black w-full"
                   maxLength={375}
-                  placeholder="type message here"
+                  placeholder="Type message here"
                   rows={5}
                   cols={75}
                   name="message"

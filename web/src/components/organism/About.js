@@ -18,7 +18,6 @@ function About() {
 
   return (
     <FadeIn>
-      <SectionTitle tw="flex justify-center mb-10">About Me</SectionTitle>
       <Wrapper id="about">
         <PlanetContainer>
           <img src={Earth} tw="w-20 top-0 left-0 absolute" />
@@ -34,17 +33,18 @@ function About() {
           />
         </PlanetContainer>
         <TextContainer>
-          <div tw=" mb-10 text-white text-2xl lg:max-w-sm">
-            I will bring curiosity, drive and initiative to your team.
-          </div>
-          <SectionText tw="mb-10">
-            As a freelance developer I need to solve my own problems and
-            communicate effectively and efficiently with my clients. In, my past
-            experience as a science teacher has benefited me in developing the
-            necessary skills of communication, perseverance, and dedication.
+          <SectionTitle tw="mb-10">About Me</SectionTitle>
+          <SectionText tw=" mb-10 lg:max-w-sm">
+            I will bring curiosity, drive, and initiative to your team.
           </SectionText>
-          <SectionText tw="font-semibold text-2xl tracking-wide mb-8">
-            Technical Skills: HTML, CSS, Javascript, React,
+          <SectionText tw="mb-10">
+            As a freelance developer I solve my own problems and communicate
+            effectively and efficiently with my clients. As a former science
+            teacher I have strong communication skills, perseverance, and
+            dedication.
+          </SectionText>
+          <SectionText tw=" mb-8">
+            Technical Skills: HTML, CSS, Javascript, &#38; React
           </SectionText>
           <SectionText>
             Other Skills: Gatsby, Sanity, GraphQL, REST API, Firebase, React
