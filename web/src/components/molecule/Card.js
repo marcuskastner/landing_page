@@ -83,7 +83,7 @@ function Card({ data }) {
               <Logos src={icons[cont]} />
             ))}
           </LogosContainer>
-          <Description>{data.description}</Description>
+          <Description className="description">{data.description}</Description>
           <LinksContainer>
             {data.github && (
               <a href={data.github} target="_blank">
@@ -119,5 +119,5 @@ const BackContent = tw.div`flex flex-col justify-around gap-6 items-center text-
 const BackTitle = tw.div`align-self[flex-start] font-semibold text-xl`
 const LogosContainer = tw.div`flex justify-center `
 const Logos = tw.img`h-8 w-8 mx-8`
-const Description = tw.div` h-[100px] mb-8`
+const Description = tw.div` h-[125px] overflow-y-scroll`
 const LinksContainer = tw.div`flex justify-between gap-8`
