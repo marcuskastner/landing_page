@@ -14,19 +14,22 @@ import Footer from "../components/organism/Footer"
 const IndexPage = () => {
   return (
     <Layout>
-      <Wrapper className="main_Container">
-        <Seo title="MK" />
-        <Nav />
-        <Hero />
-        <About />
-        <Work />
-        <Contact />
-        <Footer />
-      </Wrapper>
+      <Container>
+        <Wrapper className="main_Container">
+          <Seo title="MK" />
+          <Nav />
+          <Hero />
+          <About />
+          <Work />
+          <Contact />
+          <Footer />
+        </Wrapper>
+      </Container>
     </Layout>
   )
 }
 
 export default IndexPage
 
-const Wrapper = tw.div`max-w-[1400px] relative top-[-1px] left-0 w-full `
+const Wrapper = tw.div`max-w-[1400px] relative top-[-1px]`
+const Container = tw.div`flex justify-center bg-[#0E1E36]`
