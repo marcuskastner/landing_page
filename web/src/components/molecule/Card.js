@@ -48,11 +48,12 @@ function Card({ data }) {
           >
             {data.title}
           </FrontTitle>
-
-          <img
-            src={data.background}
-            tw="max-h-full max-w-full border-2 border-black"
-          />
+          <a href={data.link} target="_blank">
+            <img
+              src={data.background}
+              tw="max-h-full max-w-full border-2 border-black"
+            />
+          </a>
         </div>
         <Button
           tw=" border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white ) "
