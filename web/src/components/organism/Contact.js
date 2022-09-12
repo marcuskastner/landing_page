@@ -26,9 +26,10 @@ function Contact() {
   }
 
   const handleSubmit = e => {
-    if (Object.values(formState).some(value => value === ""))
+    if (Object.values(formState).some(value => value === "")) {
       alert("Please fill out all sections")
-    else {
+      e.preventDefault()
+    } else {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
