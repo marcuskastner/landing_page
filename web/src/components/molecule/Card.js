@@ -89,11 +89,11 @@ function Card({ data }) {
                 <img src={Github_Icon} tw="w-8 h-8" />
               </a>
             )}
-            {data.link && (
+            {data.link ? (
               <a href={data.link} target="_blank">
                 <img src={Link_Icon} tw="w-8 h-8" />
               </a>
-            )}
+            ) : (<p>site coming soon</p>)}
           </LinksContainer>
           <Button
             tw="border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white )"
