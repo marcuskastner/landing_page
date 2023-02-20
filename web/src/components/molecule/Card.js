@@ -78,9 +78,7 @@ function Card({ data }) {
           <BackTitle>{data.title}</BackTitle>
 
           <LogosContainer>
-            {data.tech.map(cont => (
-              <Logos src={icons[cont]} />
-            ))}
+            {data.tech && data.tech.map(cont => <Logos src={icons[cont]} />)}
           </LogosContainer>
           <Description className="description">{data.description}</Description>
           <LinksContainer>
@@ -89,11 +87,19 @@ function Card({ data }) {
                 <img src={Github_Icon} tw="w-8 h-8" />
               </a>
             )}
-            {data.link ? (
+            {data.link && (
               <a href={data.link} target="_blank">
                 <img src={Link_Icon} tw="w-8 h-8" />
               </a>
-            ) : (<p>Site Coming Soon</p>)}
+            )}
+            <LinkContainer>
+              {data.links &&
+                data.links.map(link => (
+                  <a href={link[1]} target="_blank">
+                    {link[0]}
+                  </a>
+                ))}
+            </LinkContainer>
           </LinksContainer>
           <Button
             tw="border-[var(--color-primary)] ease-in duration-300 hover:(bg-[var(--color-primary)] text-white )"
@@ -120,3 +126,4 @@ const LogosContainer = tw.div`flex justify-center `
 const Logos = tw.img`h-8 w-8 mx-8`
 const Description = tw.div` h-[125px] overflow-y-scroll`
 const LinksContainer = tw.div`flex justify-between gap-8`
+const LinkContainer = tw.div`flex flex-wrap gap-4`

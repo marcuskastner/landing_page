@@ -1,14 +1,40 @@
 import work1 from "../../images/work/climbing_site.png"
 import work2 from "../../images/work/native_app.png"
 import work3 from "../../images/work/there_alongside.png"
+import work4 from "../../images/work/threejs.png"
 
 export const card_data = [
+  {
+    title: "Three.js Projects",
+    description:
+      "Lately, I have been learning how to create immersive and interesting web experiences using HTML5 Canvas, Three.js and React Three Fiber. I hope to utilize these technologies to bring create engaging and creative visual experiences for any project I am apart of. Click on the links below to see some of the projects I have done.",
+    background: work4,
+    links: [
+      [
+        "Character Animation",
+        "https://marcus-kastner-player-controller.netlify.app",
+      ],
+      [
+        "Interactive Galaxy",
+        "https://marcus-kastner-interactive-galaxy.netlify.app",
+      ],
+      ["Curl Tubes", "https://marcus-kastner-curl-tubes.netlify.app"],
+      ["Circle Noise", "https://marcus-kastner-noise-circle.netlify.app"],
+      ["Raging Sea", "https://marcus-kastner-raging-sea.netlify.app"],
+      ["Basic Game", "https://marcus-kastner-basic-canvas-game.netlify.app"],
+      [
+        "Text Animation",
+        "https://marcus-kastner-canvas-text-animation.netlify.app",
+      ],
+    ],
+  },
   {
     title: "There Alongside",
     description:
       "I am currently contracted to build the web platform for There Alongside, a digital design brand. The site uses Gatsby on the front end and Sanity on the back end. I developed the back end schemas and used framer motion to create complicated animations. I communicate and meet regularly with my client to develop the desired UI/ UX. Skills developed: Animation, UI/UX design and development. ",
     tech: [4, 6, 7],
     background: work3,
+    links: [["Site Coming Soon", "#"]],
   },
 
   {
