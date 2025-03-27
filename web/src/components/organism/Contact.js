@@ -47,13 +47,7 @@ function Contact() {
       <Wrapper id="contact">
         <SectionTitle>Contact Me</SectionTitle>
         <FormContainer>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
+          <form name="contact" method="POST" netlify onSubmit={handleSubmit}>
             <FieldContainer>
               <input type="hidden" name="form-name" value="contact" />
               <Label>
