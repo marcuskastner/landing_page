@@ -1,6 +1,5 @@
 import work1 from "../../images/work/climbing_site.png"
 import work2 from "../../images/work/native_app.png"
-import work3 from "../../images/work/there_alongside.png"
 import work4 from "../../images/work/threejs.png"
 
 export const card_data = [
@@ -27,14 +26,6 @@ export const card_data = [
         "https://marcus-kastner-canvas-text-animation.netlify.app",
       ],
     ],
-  },
-  {
-    title: "There Alongside",
-    description:
-      "I am currently contracted to build the web platform for There Alongside, a digital design brand. The site uses Gatsby on the front end and Sanity on the back end. I developed the back end schemas and used framer motion to create complicated animations. I communicate and meet regularly with my client to develop the desired UI/ UX. Skills developed: Animation, UI/UX design and development. ",
-    tech: [4, 6, 7],
-    background: work3,
-    links: [["Site Coming Soon", "#"]],
   },
 
   {

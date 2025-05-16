@@ -19,9 +19,9 @@ function Hero() {
             I bring ideas to life
           </div>
           <SectionText tw="mb-10">
-            Freelance Front End Developer with a passion for design and
-            creativity. I love creating interesting and unique experiences
-            through software and work with designers.
+            Full Stack Engineer with a passion for design and creativity. I love
+            creating interesting and unique experiences through software and
+            work with designers.
           </SectionText>
           <AnchorLink to="/#contact">
             <Button>Get in touch</Button>

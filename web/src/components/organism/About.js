@@ -38,17 +38,16 @@ function About() {
             I will bring curiosity, drive, and initiative to your team.
           </SectionText>
           <SectionText tw="mb-10">
-            As a freelance developer I solve my own problems and communicate
-            effectively and efficiently with my clients. As a former science
-            teacher I have strong communication skills, perseverance, and
-            dedication.
+            As a full stack developer, I tackle technical challenges and
+            collaborate seamlessly with cross-functional teams. My background as
+            a science teacher has honed my communication skills, perseverance,
+            and dedication.
           </SectionText>
           <SectionText tw=" mb-8">
-            Technical Skills: HTML, CSS, Javascript, &#38; React
+            Technical Skills: HTML, CSS, Javascript, Typescript, PHP &#38; React
           </SectionText>
           <SectionText>
-            Other Skills: Gatsby, Sanity, GraphQL, REST API, Firebase, React
-            Native, Framer Motion, Git
+            Other Skills: RESTful API design, MySQL, Docker, Git, CI/CD, Testing
           </SectionText>
         </TextContainer>
       </Wrapper>
