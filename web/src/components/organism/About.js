@@ -38,10 +38,10 @@ function About() {
             I will bring curiosity, drive, and initiative to your team.
           </SectionText>
           <SectionText tw="mb-10">
-            As a full stack developer, I tackle technical challenges and
-            collaborate seamlessly with cross-functional teams. My background as
-            a science teacher has honed my communication skills, perseverance,
-            and dedication.
+            As a full stack developer with over 3 years of experience, I tackle
+            technical challenges and collaborate seamlessly with
+            cross-functional teams. My background as a science teacher has honed
+            my communication skills, perseverance, and dedication.
           </SectionText>
           <SectionText tw=" mb-8">
             Technical Skills: HTML, CSS, Javascript, Typescript, PHP &#38; React
