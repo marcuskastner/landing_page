@@ -49,10 +49,11 @@ function Card({ data }) {
             {data.title}
           </FrontTitle>
           {data.link ? (
-            <a href={data.link}>
+            <a href={data.link} target="blank">
               <img
                 src={data.background}
-                tw="max-h-full max-w-full border-2 border-black"
+                tw="border-2 border-black"
+                style={{ maxHeight: "220px" }}
               />
             </a>
           ) : (
